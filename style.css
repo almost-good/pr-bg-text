@@ -1,0 +1,52 @@
+body {
+  background: rgb(46, 3, 48);
+  overflow: hidden;
+  margin: 0;
+}
+
+.container {
+  background: url('bg.jpg') no-repeat center center / cover;
+  height: 100vh;
+}
+
+.overlay {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: rgba(0 ,0 ,0 , .7);
+}
+
+p {
+  font-size: 10rem;
+}
+
+.animated {
+  font-size: 5rem;
+  line-height: 1.5rem;
+  font-weight: 900;
+  font-family: Arial;
+  background: url('rainbow.jpg') no-repeat;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: moveBg 5s linear infinite;
+  -webkit-animation: moveBg 5s linear infinite;
+}
+
+@keyframes moveBg {
+  0% {
+    background-position: 0% 30%;
+  }
+
+  50% {
+    background-position: 100% 30%;
+    opacity: 0;
+  }
+
+  100% {
+    background-position: 0% 30%;
+    opacity: 0;
+  }
+}
